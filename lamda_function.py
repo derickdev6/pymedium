@@ -1,4 +1,5 @@
 def main():
+    print('begin')
     # Variable id    argumento        expresion
     #palindrome= lambda string: string == string[::-1]
     #print(palindrome(input('Type here: ')))
