@@ -15,15 +15,16 @@ def palindrome(word):
 
 def divisors(num):
     try:
+        num = int(num)
         if num <= 0:
             raise ValueError('Only x > 0')
         divis = [i for i in range(1, num) if num % i == 0]
         return divis
     except ValueError as ve:
-        print(ve)
+        print(ve, "| Value Error")
         return []
     except TypeError:
-        print('Type error only numbers > 0 accepted')
+        print('Type error only integer numbers > 0 accepted')
         return []
     except ZeroDivisionError:
         print("May not divide by zero")
@@ -32,7 +33,7 @@ def divisors(num):
 
 def main():
     # print(palindrome('sanas'))
-    print(divisors(int(input("X: "))))
+    print(divisors(input("X: ")))
 
 
 if __name__ == '__main__':
